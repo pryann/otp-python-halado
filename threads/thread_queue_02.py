@@ -6,7 +6,7 @@ from queue import Queue
 def producer(q):
     for i in range(5):
         sleep(1)
-        value = f"Produced: {i}"
+        value = f"Produced {i}"
         print(value)
         q.put(value)
     q.put(None)
@@ -17,7 +17,7 @@ def consumer(q):
         value = q.get()
         if value is None:
             break
-        print(f"Consumed: {value}")
+        print(f"Consumed: '{value}'")
 
 
 if __name__ == "__main__":
