@@ -1,6 +1,6 @@
 from time import sleep
 from multiprocessing import Pool
-from decorators import runtime_benchmark
+# from decorators import runtime_benchmark
 
 
 def process_fn(sec):
@@ -8,7 +8,7 @@ def process_fn(sec):
     return f"Process completed after {sec} seconds"
 
 
-@runtime_benchmark
+# @runtime_benchmark
 def main():
     proc_count = 5
     pool = Pool(processes=proc_count)

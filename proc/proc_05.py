@@ -1,6 +1,6 @@
 from time import sleep
 from multiprocessing import Pool
-from decorators import runtime_benchmark
+# from decorators import runtime_benchmark
 
 results = []
 
@@ -15,7 +15,7 @@ def success_callback(result):
     results.append(result_dict)
 
 
-@runtime_benchmark
+# @runtime_benchmark
 def main():
     proc_count = 5
     pool = Pool(processes=proc_count)
